@@ -1,0 +1,21 @@
+/* .CardContainer div:nth-of-type(1) {
+	display: flex;
+	/* flex-direction: row-reverse; */
+
+.CardContainer {
+	padding: 2vh 2vw 2vh 2vw;
+	max-width: 94vw;
+}
+.CardContainer div {
+	margin-bottom: 24vh;
+	max-width: 95vw;
+}
+
+/* .CardContainer p {
+	font-size: xx-large;
+}
+.card p:only-of-type {
+	position: absolute;
+	color: rgb(158, 41, 194);
+	max-width: 30vw;
+} */
