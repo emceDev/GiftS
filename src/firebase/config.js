@@ -1,5 +1,5 @@
 import firebase from "firebase";
-
+// import functions from "firebase/firebase-functions";
 export const firebaseConfig = {
 	apiKey: "AIzaSyBbWY6eNgAQ_fFjw8214sJN4dKKo-o-bRs",
 	authDomain: "gift-32619.firebaseapp.com",
@@ -10,3 +10,4 @@ export const firebaseConfig = {
 	appId: "1:913937089749:web:6bd348fbc8096923c48e5c",
 };
 export const app = firebase.initializeApp(firebaseConfig);
+export const functions = firebase.functions();

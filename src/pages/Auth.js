@@ -1,6 +1,6 @@
 import { Login } from "../components/Login";
 import { Register } from "../components/Register";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Button } from "@material-ui/core";
 import { app } from "../firebase/config";
 
@@ -36,8 +36,23 @@ export const Auth = () => {
 				setErrorMessage(errorMessage.message);
 			});
 	}
+	function hello() {
+		app
+			.functions()
+			.httpsCallable("helloWorld")
+			.then((response) => {
+				console.log(response);
+			});
+	}
 	return (
 		<div>
+			<Button
+				onClick={() => {
+					hello();
+				}}
+			>
+				say hi
+			</Button>
 			{errorMessage}
 			{register === false ? (
 				<Fragment>
