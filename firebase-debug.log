@@ -1,0 +1,27 @@
+[debug] [2020-10-03T11:54:46.837Z] ----------------------------------------------------------------------
+[debug] [2020-10-03T11:54:46.840Z] Command:       /usr/bin/node /usr/local/bin/firebase functions:disable
+[debug] [2020-10-03T11:54:46.840Z] CLI Version:   7.11.0
+[debug] [2020-10-03T11:54:46.840Z] Platform:      linux
+[debug] [2020-10-03T11:54:46.840Z] Node Version:  v12.16.2
+[debug] [2020-10-03T11:54:46.841Z] Time:          Sat Oct 03 2020 13:54:46 GMT+0200 (GMT+02:00)
+[debug] [2020-10-03T11:54:46.841Z] ----------------------------------------------------------------------
+[debug] [2020-10-03T11:54:46.841Z] 
+[error] Error: [object Object] is not a Firebase command
+[debug] [2020-10-03T11:54:46.847Z] TypeError: str.toLowerCase is not a function
+    at didYouMean (/usr/local/lib/node_modules/firebase-tools/node_modules/didyoumean/didYouMean-1.2.1.js:147:48)
+    at suggestCommands (/usr/local/lib/node_modules/firebase-tools/lib/index.js:28:22)
+    at Command.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/index.js:57:14)
+    at Command.listener (/usr/local/lib/node_modules/firebase-tools/node_modules/commander/index.js:370:29)
+    at Command.emit (events.js:310:20)
+    at Command.EventEmitter.emit (domain.js:482:12)
+    at Command.parseArgs (/usr/local/lib/node_modules/firebase-tools/node_modules/commander/index.js:894:12)
+    at Command.parse (/usr/local/lib/node_modules/firebase-tools/node_modules/commander/index.js:642:21)
+    at Object.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js:98:22)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+[error] 
+[error] Error: An unexpected error has occurred.

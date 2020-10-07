@@ -36,23 +36,9 @@ export const Auth = () => {
 				setErrorMessage(errorMessage.message);
 			});
 	}
-	function hello() {
-		app
-			.functions()
-			.httpsCallable("helloWorld")
-			.then((response) => {
-				console.log(response);
-			});
-	}
+
 	return (
 		<div>
-			<Button
-				onClick={() => {
-					hello();
-				}}
-			>
-				say hi
-			</Button>
 			{errorMessage}
 			{register === false ? (
 				<Fragment>
