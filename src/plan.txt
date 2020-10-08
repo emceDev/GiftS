@@ -1,0 +1,2 @@
+Rejestruje = tworzy w auth, tworzy uid w rtdb
+                                -Array[photo,para]
