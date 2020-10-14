@@ -51,6 +51,8 @@ export const Auth = (props) => {
 			});
 	}
 
+
+
 	return (
 		<div>
 			{errorMessage}
