@@ -33,7 +33,7 @@ export const Section = props =>{
                 console.log(props.id,"  ",'Moving out...')
                 el.className = 'moved'
                 let amount = ImgH-ImgH/2-bound.bottom
-                console.log("amount"+amount)
+                console.log("amgit initount"+amount)
                 el.style.transform = 'translateY('+amount*2+'px)'
                 // el.style.transform = 'translate(0px,'+ImgH+'px)'
             }else if(bound.bottom === ImgH){
