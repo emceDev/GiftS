@@ -78,7 +78,6 @@ export const App = () => {
 						<Section  id={x.id} resized={resized} inView={inView} scrPos={scrPos} img={x.img} text={x.text} oC={x.oC} tC={x.tC}/>
 					)
 				})}
-				<div style={{position:'absolute',zIndex:'565', top:'0',left:"0"}}> woah I'ma Div</div>
 			</div>
 		</div>
 	);
