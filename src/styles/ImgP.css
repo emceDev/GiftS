@@ -1,0 +1,10 @@
+.App img {
+	width: 100vw;
+}
+.Section1 img {
+}
+.Section1 div {
+	width: 60vw;
+	transform: translate(0%, -100vh);
+	background-color: red;
+}
