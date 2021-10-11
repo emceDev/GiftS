@@ -60,7 +60,7 @@ export const Section = props =>{
         <div className="Section" style={{opacity:imgLoad ?'1':'0' }}>
             <img onLoad={(e)=>{res(e);setimgLoad(true)}} src={props.img}></img>
             <div style={{ bottom:ImgH/2 }}>
-               <p style={{color:props.tC, backgroundImage:"linear-gradient(43deg,#4158d0 "+Math.floor(props.scrPos/90)+"%,#ce2cc5 46%,#ffcc70 100%)"}}>{props.text}</p>
+               <p style={{color:props.tC, backgroundImage:"linear-gradient(43deg,#4158d0 "+Math.floor(props.scrPos/100)+"%,#ce2cc5 "+Math.floor(props.scrPos/80)+"%,#ffcc70 "+Math.floor(props.scrPos/10)+"%)"}}>{props.text}</p>
             </div>
         </div>
     )
