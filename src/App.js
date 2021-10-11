@@ -2,56 +2,65 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import { Section } from "./components/Section";
 
-const data = [
 
-	{
-		'id':'0',
-		'text':'Opis obrazka ',
-		'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1603814005/serafin/seraf_itiv1j.jpg',
-		'oC':'blue',
-		'tC':'white',
-	},	
-	{
-		'id':'1',
-		'text':'Purple overlay here Bardzo długi z resztą taki na testy w sam raz, a jadnak nie musi byc jeszcze dlyzszy',
-		'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1603814004/serafin/bridge_jcktvp.jpg',
-		'oC':'purple',
-		'tC':'white',
-	},	
-	{
-		'id':'2',
-		'text':'Orange overlay here',
-		'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1603814000/serafin/see2_b6litf.jpg',
-		'oC':'orange',
-		'tC':'white',
-	},	
-	{
-		'id':'3',
-		'text':'green overlay here',
-		'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1603813995/serafin/forestSnow_mngk1v.jpg',
-		'oC':'green',
-		'tC':'white',
-	},	
-	{
-		'id':'4',
-		'text':'green overlay here',
-		'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1603813995/serafin/sehen1_bjpopo.jpg',
-		'oC':'red',
-		'tC':'white',
-	},	
-	{
-		'id':'5',
-		'text':'green overlay here',
-		'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1603813988/serafin/road1_u5dydl.jpg',
-		'oC':'yellow',
-		'tC':'white',
-	}
-]
 export const App = () => {
 	const [overCol, setoverCol] = useState('blue')
 	const [scrPos, setscrPos] = useState('0')
 	const [resized, setresized] = useState(false)
+	const [tranformations, set_tranformations] = useState()
+	const data = [
 
+		{
+			'id':'0',
+			'text':'Sto lat Brat!',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload'+tranformations+'/v1603814005/serafin/seraf_itiv1j.jpg',
+			'oC':'blue',
+			'tC':'white',
+		},	
+		{
+			'id':'1',
+			'text':'Kawał świata...',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload'+tranformations+'/v1603814004/serafin/bridge_jcktvp.jpg',
+			'oC':'purple',
+			'tC':'white',
+		},	
+		{
+			'id':'2',
+			'text':'na zdjęciach zatrzymałeś,',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload'+tranformations+'/v1603814000/serafin/see2_b6litf.jpg',
+			'oC':'orange',
+			'tC':'white',
+		},	
+		{
+			'id':'3',
+			'text':'sporo więcej przejeżdziłeś,',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload'+tranformations+'/v1603813995/serafin/forestSnow_mngk1v.jpg',
+			'oC':'green',
+			'tC':'white',
+		},	
+		{
+			'id':'4',
+			'text':'uwieczniłeś miłe chwile,',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload'+tranformations+'/v1603813995/serafin/sehen1_bjpopo.jpg',
+			'oC':'red',
+			'tC':'white',
+		},	
+		{
+			'id':'5',
+			'text':'życzę ci po tysiąc tyle',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload'+tranformations+'/v1603813988/serafin/road1_u5dydl.jpg',
+			'oC':'white',
+			'tC':'white',
+		},	
+		{
+			'id':'6',
+			'text':'i drugie tyle',
+			'img':'https://res.cloudinary.com/m4t1ce/image/upload/v1633950011/serafin/serafinoliwer2_uu4uo8.jpg',
+			'oC':'yellow',
+			'tC':'white',
+		}
+		
+	]
 	function inView(color) {
 		setoverCol(color)
 	}
@@ -64,7 +73,16 @@ export const App = () => {
 	useEffect(() => {
 		// console.log(window.pageYOffset)
 		window.addEventListener('scroll',(()=>{setscrPos(window.pageYOffset)}))
-		window.addEventListener('resize',resi)
+		window.addEventListener('resize', resi)
+		let width=window.screen.width
+		if(width<700){
+			set_tranformations('/e_improve,w_700,h_600,c_thumb,g_auto')
+			console.log('smaller')
+		}else{
+			set_tranformations('/e_improve,w_'+window.screen.width+',h_600,c_thumb,g_auto')
+		}
+		
+		
 	}, [])
 
 	return (
