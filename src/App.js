@@ -79,7 +79,8 @@ export const App = () => {
 			set_tranformations('/e_improve,w_700,h_600,c_thumb,g_auto')
 			console.log('smaller')
 		}else{
-			set_tranformations('/e_improve,w_'+window.screen.width+',h_600,c_thumb,g_auto')
+			set_tranformations('')
+			// set_tranformations('/e_improve,w_'+window.screen.width+',h_600,c_thumb,g_auto')
 		}
 		
 		

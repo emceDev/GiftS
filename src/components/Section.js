@@ -39,6 +39,19 @@ export const Section = props =>{
             }else if(bound.bottom === ImgH){
                 console.log('Backe')
             }
+     
+            let wynik=0;
+            if(wynik>0){
+                wynik=(100-(Math.floor(props.scrPos)/10))
+                // odejmuj
+            }else{
+                // dodawaj
+            }
+            // console.log('hHERE !!!!!!!s')
+            // console.log(Math.floor(props.scrPos/90))
+            // console.log('WYNIK')
+            // console.log(wynik)
+            
             // console.log("In VIew "+props.id)
         }
     },[props.scrPos])
@@ -47,7 +60,7 @@ export const Section = props =>{
         <div className="Section" style={{opacity:imgLoad ?'1':'0' }}>
             <img onLoad={(e)=>{res(e);setimgLoad(true)}} src={props.img}></img>
             <div style={{ bottom:ImgH/2 }}>
-               <p style={{color:props.tC}}>{props.text}</p>
+               <p style={{color:props.tC, backgroundImage:"linear-gradient(43deg,#4158d0 "+Math.floor(props.scrPos/90)+"%,#ce2cc5 46%,#ffcc70 100%)"}}>{props.text}</p>
             </div>
         </div>
     )
